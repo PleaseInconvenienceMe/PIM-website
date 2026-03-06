@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate – PIM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A6E8E;
+      --primary-light: #2a8fb5;
+      --primary-dark: #0f4a61;
+      --bg: #f7fafb;
+      --white: #ffffff;
+      --text: #0f2027;
+      --text-muted: #4a6572;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 48px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26,110,142,0.1);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: 0.1em;
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 480px;
+    }
+
+    .heart {
+      font-size: 3rem;
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* TODO: replace this with real donation options */
+    .todo {
+      background: #fff8e1;
+      border: 1px dashed #f0c040;
+      border-radius: 12px;
+      padding: 20px 24px;
+      color: #7a6000;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+    footer a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">PIM</a>
+  </nav>
+
+  <main>
+    <div class="content">
+      <span class="heart">♥</span>
+      <h1>Support PIM</h1>
+      <p>PIM is a one-person project. If it's helped you use your phone less, a small contribution keeps it going.</p>
+
+      <!-- TODO: add donation options here (Ko-fi, PayPal, etc.) -->
+      <div class="todo">
+        🚧 Donation options coming soon.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Please Inconvenience Me &nbsp;|&nbsp; <a href="index.html#privacy">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
