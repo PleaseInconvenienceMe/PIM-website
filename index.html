@@ -293,12 +293,13 @@
       -webkit-overflow-scrolling: touch;
       padding: 8px 24px 24px;
       scrollbar-width: none;
+      justify-content: center;
     }
 
     .gallery::-webkit-scrollbar { display: none; }
 
     .gallery img {
-      height: 320px;
+      height: 400px;
       width: auto;
       border-radius: 12px;
       flex-shrink: 0;
@@ -538,7 +539,8 @@
         gap: 10px;
       }
 
-      .gallery img { height: 240px; }
+      .gallery { justify-content: flex-start; }
+      .gallery img { height: 300px; }
       .lightbox-prev { left: 8px; }
       .lightbox-next { right: 8px; }
       .lightbox-arrow { width: 40px; height: 40px; font-size: 1.2rem; }
