@@ -316,27 +316,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
       padding: 40px 0;
     }
 
     .gallery img {
-      height: 340px;
+      height: 360px;
       width: auto;
       border-radius: 20px;
       cursor: pointer;
       opacity: 0.5;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transform: scale(0.88);
+      transform: scale(0.82);
       transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
       flex-shrink: 0;
+      margin: 0 -20px;
+      position: relative;
+      z-index: 1;
     }
 
     .gallery img.active {
-      transform: scale(1.12);
+      transform: scale(1.1);
       opacity: 1;
-      box-shadow: 0 20px 56px rgba(0,0,0,0.25);
-      z-index: 2;
+      box-shadow: 0 20px 56px rgba(0,0,0,0.3);
+      z-index: 3;
     }
 
     /* ─── HOW IT WORKS ─── */
@@ -507,8 +509,8 @@
       }
 
       .gallery-outer { gap: 8px; }
-      .gallery { gap: 8px; padding: 30px 0; }
-      .gallery img { height: 240px; }
+      .gallery { padding: 30px 0; }
+      .gallery img { height: 200px; margin: 0 -12px; }
       .gallery img.active { transform: scale(1.08); }
       .gallery-arrow { width: 36px; height: 36px; font-size: 1rem; }
 
@@ -583,7 +585,7 @@
       <h2>See it in action.</h2>
     </div>
     <div class="gallery-outer reveal">
-      <button class="gallery-arrow" id="gallery-prev">&#8592;</button>
+      <button class="gallery-arrow" id="gallery-prev">&#9664;</button>
       <div class="gallery">
         <img src="screenshots/Screenshot_20260320-200812.png" alt="PIM welcome screen" class="active" />
         <img src="screenshots/Screenshot_20260320-201159.png" alt="Restricted apps list" />
@@ -592,7 +594,7 @@
         <img src="screenshots/Screenshot_20260320-201459.png" alt="Upgrade to unlimited" />
         <img src="screenshots/Screenshot_20260320-214336.png" alt="Options and settings" />
       </div>
-      <button class="gallery-arrow" id="gallery-next">&#8594;</button>
+      <button class="gallery-arrow" id="gallery-next">&#9654;</button>
     </div>
   </section>
 
