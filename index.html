@@ -767,6 +767,16 @@
       const current = galleryImgs.findIndex(i => i.classList.contains('active'));
       setActive((current + 1) % galleryImgs.length);
     });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        const current = galleryImgs.findIndex(i => i.classList.contains('active'));
+        setActive((current - 1 + galleryImgs.length) % galleryImgs.length);
+      } else if (e.key === 'ArrowRight') {
+        const current = galleryImgs.findIndex(i => i.classList.contains('active'));
+        setActive((current + 1) % galleryImgs.length);
+      }
+    });
   </script>
 
 </body>
