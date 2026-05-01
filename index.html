@@ -31,37 +31,26 @@
 
     /* ─── NAV ─── */
     nav {
-      position: fixed;
+      position: absolute;
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      padding: 18px 48px;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(26,110,142,0.1);
+      padding: 28px 48px;
+      gap: 36px;
     }
 
-    .nav-logo {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--primary);
-      letter-spacing: 0.1em;
-    }
-
-    .nav-cta {
-      background: var(--primary);
-      color: white;
-      padding: 10px 24px;
-      border-radius: 50px;
+    nav a {
+      color: rgba(255,255,255,0.9);
       text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.2s;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
     }
 
-    .nav-cta:hover { background: var(--primary-light); transform: translateY(-1px); }
+    nav a:hover { color: white; }
 
     /* ─── HERO ─── */
     .hero {
@@ -70,7 +59,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 24px 80px;
+      padding: 110px 24px 80px;
       background: linear-gradient(160deg, #0f2027 0%, #1A6E8E 50%, #2a8fb5 100%);
       position: relative;
       overflow: hidden;
@@ -144,7 +133,7 @@
       font-size: clamp(1.3rem, 3vw, 1.8rem);
       color: rgba(255,255,255,0.9);
       line-height: 1.5;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
     }
 
     .hero-btns {
@@ -522,7 +511,9 @@
     /* ─── MOBILE ─── */
     @media (max-width: 600px) {
       .coming-soon-wrap:hover:not(.tapped) .tooltip { opacity: 0; }
-      .hero { padding: 40px 20px 60px; min-height: auto; }
+      nav { padding: 20px 24px; gap: 24px; }
+      nav a { font-size: 0.9rem; }
+      .hero { padding: 100px 20px 60px; min-height: auto; }
 
       .hero .tagline { font-size: 1.2rem; margin-bottom: 32px; }
 
@@ -568,6 +559,12 @@
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/story.html">Why PIM?</a>
+    <a href="#install">Get the App</a>
+  </nav>
 
   <!-- HERO -->
   <section class="hero">
