@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why PIM – Please Inconvenience Me</title>
+  <meta name="description" content="Why I built PIM — a friction-based app blocker that uses cognitive tasks instead of strict locking." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A6E8E;
+      --primary-light: #2a8fb5;
+      --primary-dark: #0f4a61;
+      --accent: #e8f4f8;
+      --bg: #f7fafb;
+      --white: #ffffff;
+      --text: #0f2027;
+      --text-muted: #4a6572;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      border-bottom: 1px solid rgba(26,110,142,0.08);
+    }
+
+    .page-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .page-logo-img {
+      height: 32px;
+      width: auto;
+    }
+
+    .page-logo-text {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: 0.08em;
+    }
+
+    .page-cta {
+      background: var(--primary);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .page-cta:hover { background: var(--primary-light); transform: translateY(-1px); }
+
+    /* ─── ARTICLE ─── */
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+    }
+
+    .article-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+
+    article p {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    article p a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.85rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+    footer a:hover { color: white; }
+
+    @media (max-width: 600px) {
+      .page-header { padding: 18px 24px; }
+      article { padding: 56px 24px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <a href="/" class="page-logo">
+      <img src="favicon.png" alt="" class="page-logo-img" />
+      <span class="page-logo-text">PIM</span>
+    </a>
+    <a href="/#install" class="page-cta">Get the App</a>
+  </header>
+
+  <!-- ARTICLE -->
+  <article>
+    <p class="article-eyebrow">A note from the developer</p>
+    <h1 class="article-title">Why PIM</h1>
+
+    <p>The idea of PIM was born a few years ago. I was on YouTube to find a recipe — the plan was to get it, and immediately start making dinner.</p>
+
+    <p>45 minutes later, I &ldquo;woke up&rdquo; from the screen trance. Dinner wasn&rsquo;t started and I didn&rsquo;t even get the recipe. I had gotten hooked on YouTube Shorts — they grabbed me as soon as I got on YouTube. I watched one after another, going down the rabbit hole, and doomscrolling my life away. And forgot completely what I was planning on doing.</p>
+
+    <p>I&rsquo;m embarrassed to say that this wasn&rsquo;t a rare occurrence. As a matter of fact, it happened a lot, and I knew that the same thing was happening for my friends as well. And scrolling through phones for most of the day was the default behavior for a lot of people.</p>
+
+    <p>So — this is normal for today&rsquo;s world. Yet it&rsquo;s also deeply broken.</p>
+
+    <p>And it&rsquo;s not a problem of willpower. It&rsquo;s a problem of systems that are built to drain us, to extract from us.</p>
+
+    <p>Tens of thousands of designers, programmers, and scientists at big tech companies work on apps like YouTube, Instagram and TikTok. Their goal is to make the apps as addictive as possible, and as difficult as possible for you to break away.</p>
+
+    <p>Web pages used to have a &ldquo;more&rdquo; button at the bottom. You had to tap it to see the next page. That tiny little inconvenience — tapping a button — was designed away in 2006. Why? Because every tap was a decision point, and many users didn&rsquo;t bother.</p>
+
+    <p>Now most apps have &ldquo;infinite scroll&rdquo; — the content auto-loads when you reach the bottom. No decision, no tap, no clicking &ldquo;more&rdquo;. The result: far more hours spent on phones.</p>
+
+    <p>I tested out a lot of existing focus apps, and app blockers. Most of them were very complex, with complicated schedules, gamification and &ldquo;streaks&rdquo;, avatars, rewards, etc. And an onboarding process that could take 5 minutes, ask you lots of intrusive questions about your life, and want to see your contact list.</p>
+
+    <p>Not to mention the often very high prices, with confusing subscription tiers and hidden costs.</p>
+
+    <p>My vision was this — to reintroduce inconvenience. That little inconvenience of tapping the &ldquo;more&rdquo; button, which helped prevent people from wasting their lives on phones? I wanted to recreate that, in a way that works with people, and doesn&rsquo;t feel like a punishment.</p>
+
+    <p>So instead of strict app blockers, which are often quickly uninstalled, I created an &ldquo;inconvenience&rdquo; system. PIM — Please Inconvenience Me. The inconveniences are tasks that you do on your phone, like math problems, typing something, or screen tapping exercises.</p>
+
+    <p>They&rsquo;re meant as a speed bump. If you restrict Instagram, you can&rsquo;t just open it. Instead, you need to actually do some work first. Make the tasks as easy or hard as you want, and customize them however works for you.</p>
+
+    <p>It&rsquo;s not a punishment. Instead, it&rsquo;s some friction. PIM gives you a moment to reflect, and makes you do an inconvenient task. Your conscious mind then has a chance to wake up, and overpower the reflex that wants the easy dopamine hit of the addictive app.</p>
+
+    <p>PIM started as a personal project. Within a few weeks my YouTube time had dropped, and I was using my phone deliberately again.</p>
+
+    <p>I started to realize it could work for a lot of people, and not just me. I added more task types — it was going to be just simple math problems when a friend told me she just didn&rsquo;t ever want to do math problems, so I added other options as well.</p>
+
+    <p>If any of this resonates, you can <a href="/#install">try PIM free for 7 days</a>. It&rsquo;s a one-time purchase, no tracking, no ads, and no accounts. Completely customized options for each app.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Please Inconvenience Me &nbsp;|&nbsp; <a href="/">Home</a> &nbsp;|&nbsp; <a href="/#privacy">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
