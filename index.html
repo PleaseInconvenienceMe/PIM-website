@@ -467,50 +467,13 @@
     .store-btn-text .sub { font-size: 0.65rem; font-weight: 400; opacity: 0.85; display: block; color: white; text-transform: uppercase; letter-spacing: 0.04em; }
     .store-btn-text .main { font-size: 1rem; font-weight: 700; display: block; line-height: 1.2; color: white; }
 
-    /* ─── COMING SOON TOOLTIP ─── */
     .coming-soon-wrap {
       position: relative;
       display: inline-block;
     }
 
-    .coming-soon-wrap .tooltip {
-      position: absolute;
-      bottom: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      color: var(--primary-dark);
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      white-space: nowrap;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s, transform 0.2s;
-      transform: translateX(-50%) translateY(4px);
-    }
-
-    .coming-soon-wrap .tooltip::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 6px solid transparent;
-      border-top-color: white;
-    }
-
-    .coming-soon-wrap:hover .tooltip,
-    .coming-soon-wrap.tapped .tooltip {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
     /* ─── MOBILE ─── */
     @media (max-width: 600px) {
-      .coming-soon-wrap:hover:not(.tapped) .tooltip { opacity: 0; }
       nav { padding: 20px 24px; gap: 24px; }
       nav a { font-size: 0.9rem; }
       .hero { padding: 100px 20px 60px; min-height: auto; }
@@ -557,13 +520,13 @@
       transform: translateY(0);
     }
   </style>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "35da5de91ae241a180ee8f3052ffc3c9"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
     <a href="/story.html">Why PIM?</a>
-    <a href="#install">Get the App</a>
   </nav>
 
   <!-- HERO -->
@@ -592,14 +555,13 @@
           </a>
         </div>
         <div class="coming-soon-wrap">
-          <a href="#" class="store-btn apple">
+          <a href="https://apps.apple.com/us/app/pim-please-inconvenience-me/id6761953470" class="store-btn apple">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             <div class="store-btn-text">
               <span class="sub">Download on the</span>
               <span class="main">App Store</span>
             </div>
           </a>
-          <span class="tooltip">Coming soon to the App Store!</span>
         </div>
       </div>
     </div>
@@ -676,14 +638,13 @@
         </a>
       </div>
       <div class="coming-soon-wrap">
-        <a href="#" class="store-btn apple">
+        <a href="https://apps.apple.com/us/app/pim-please-inconvenience-me/id6761953470" class="store-btn apple">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           <div class="store-btn-text">
             <span class="sub">Download on the</span>
             <span class="main">App Store</span>
           </div>
         </a>
-        <span class="tooltip">Coming soon to the App Store!</span>
       </div>
     </div>
   </section>
@@ -760,25 +721,6 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Tooltip on click for touch devices
-    document.querySelectorAll('.coming-soon-wrap').forEach(wrap => {
-      wrap.addEventListener('click', (e) => {
-        const link = wrap.querySelector('a');
-        if (link && link.getAttribute('href') === '#') {
-          e.preventDefault();
-          document.querySelectorAll('.coming-soon-wrap').forEach(w => w.classList.remove('tapped'));
-          wrap.classList.add('tapped');
-          setTimeout(() => wrap.classList.remove('tapped'), 2000);
-        }
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.coming-soon-wrap')) {
-        document.querySelectorAll('.coming-soon-wrap').forEach(w => w.classList.remove('tapped'));
-      }
-    });
 
     // Auto-expand privacy policy if #privacy is in the URL
     if (window.location.hash === '#privacy') {
