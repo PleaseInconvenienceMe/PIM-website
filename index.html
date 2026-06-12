@@ -649,57 +649,9 @@
     </div>
   </section>
 
-  <!-- PRIVACY POLICY -->
-  <section id="privacy" style="background: var(--white); padding: 40px 24px;">
-    <div style="max-width: 680px; margin: 0 auto;">
-      <button onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').classList.toggle('flip')"
-        style="background:none; border:none; cursor:pointer; display:flex; align-items:center; gap:10px; font-family:inherit; font-size:1rem; font-weight:700; color:var(--primary); padding:0;">
-        Privacy Policy <span class="arrow" style="transition: transform 0.3s;">▼</span>
-      </button>
-      <div style="max-height:0; overflow:hidden; transition: max-height 0.4s ease;">
-      <style>.open { max-height: 2000px !important; } .flip { transform: rotate(180deg); }</style>
-      <div style="padding-top: 24px;">
-      <p style="font-size: 0.85rem; color: #888; margin-bottom: 32px;">Last updated: April 2026</p>
-
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333;">PIM (Please Inconvenience Me) is designed with privacy in mind. We do not collect, store, or share any personal data.</p>
-
-      <h3 style="font-size: 1rem; font-weight: 700; margin: 28px 0 8px; color: var(--primary);">What data does PIM access?</h3>
-
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333; font-weight: 600; margin-bottom: 4px;">On iOS, PIM uses:</p>
-      <ul style="padding-left: 20px; margin-top: 8px; margin-bottom: 20px;">
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Screen Time (Family Controls)</strong> — to restrict and shield apps you choose. PIM never sees your Screen Time data; it only applies restrictions you set.</li>
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Notifications</strong> — to alert you when a task is required to unlock an app.</li>
-      </ul>
-
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333; font-weight: 600; margin-bottom: 4px;">On Android, PIM uses:</p>
-      <ul style="padding-left: 20px; margin-top: 8px;">
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>App Usage Access</strong> — to detect when a restricted app is opened. This data never leaves your device.</li>
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Display Over Other Apps</strong> — to show the task on top of restricted apps.</li>
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Query Installed Apps</strong> — to display the list of apps you can restrict.</li>
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Notifications</strong> — to show the persistent foreground service notification required by Android.</li>
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Boot</strong> — to restart the monitoring service when your device reboots.</li>
-        <li style="font-size: 0.95rem; line-height: 1.7; color: #333; margin-bottom: 6px;"><strong>Battery Optimization</strong> — to keep the service running reliably in the background.</li>
-      </ul>
-
-      <h3 style="font-size: 1rem; font-weight: 700; margin: 28px 0 8px; color: var(--primary);">Does PIM collect any personal data?</h3>
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333;">No. PIM does not collect, transmit, or store any personal data on external servers. All settings and preferences are stored locally on your device only.</p>
-
-      <h3 style="font-size: 1rem; font-weight: 700; margin: 28px 0 8px; color: var(--primary);">Does PIM use analytics or advertising?</h3>
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333;">No. PIM contains no analytics, advertising SDKs, or third-party tracking of any kind.</p>
-
-      <h3 style="font-size: 1rem; font-weight: 700; margin: 28px 0 8px; color: var(--primary);">Does PIM share data with third parties?</h3>
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333;">No. PIM does not share any data with third parties because no data is collected in the first place.</p>
-
-      <h3 style="font-size: 1rem; font-weight: 700; margin: 28px 0 8px; color: var(--primary);">Contact</h3>
-      <p style="font-size: 0.95rem; line-height: 1.7; color: #333;">If you have any questions about this privacy policy, contact us at <a href="mailto:hello@pleaseinconvenienceme.com" style="color: var(--primary);">hello@pleaseinconvenienceme.com</a>.</p>
-      </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Please Inconvenience Me &nbsp;|&nbsp; <a href="/story.html">Why PIM</a> &nbsp;|&nbsp; <a href="#privacy">Privacy Policy</a></p>
+    <p>&copy; 2026 Please Inconvenience Me &nbsp;|&nbsp; <a href="/story.html">Why PIM</a> &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
   </footer>
 
   <div class="lightbox" id="lightbox">
@@ -722,11 +674,9 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Auto-expand privacy policy if #privacy is in the URL
+    // Privacy policy moved to its own page; keep old #privacy links working
     if (window.location.hash === '#privacy') {
-      const privacyContent = document.querySelector('#privacy .arrow').closest('button').nextElementSibling;
-      privacyContent.classList.add('open');
-      document.querySelector('#privacy .arrow').classList.add('flip');
+      window.location.replace('/privacy.html');
     }
 
     // Lightbox

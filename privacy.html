@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – PIM</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A6E8E;
+      --primary-light: #2a8fb5;
+      --primary-dark: #0f4a61;
+      --bg: #f7fafb;
+      --white: #ffffff;
+      --text: #0f2027;
+      --text-muted: #4a6572;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 48px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26,110,142,0.1);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: 0.1em;
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 24px;
+    }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 28px 0 8px;
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .label {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    a { color: var(--primary); }
+
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+    footer a:hover { color: white; }
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "35da5de91ae241a180ee8f3052ffc3c9"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">PIM</a>
+  </nav>
+
+  <main>
+    <div class="content">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 2026</p>
+
+      <p>PIM (Please Inconvenience Me) is designed with privacy in mind. We do not collect, store, or share any personal data.</p>
+
+      <h2>What data does PIM access?</h2>
+
+      <p class="label">On iOS, PIM uses:</p>
+      <ul>
+        <li><strong>Screen Time (Family Controls)</strong> — to restrict and shield apps you choose. PIM never sees your Screen Time data; it only applies restrictions you set.</li>
+        <li><strong>Notifications</strong> — to alert you when a task is required to unlock an app.</li>
+      </ul>
+
+      <p class="label">On Android, PIM uses:</p>
+      <ul>
+        <li><strong>App Usage Access</strong> — to detect when a restricted app is opened. This data never leaves your device.</li>
+        <li><strong>Display Over Other Apps</strong> — to show the task on top of restricted apps.</li>
+        <li><strong>Query Installed Apps</strong> — to display the list of apps you can restrict.</li>
+        <li><strong>Notifications</strong> — to show the persistent foreground service notification required by Android.</li>
+        <li><strong>Boot</strong> — to restart the monitoring service when your device reboots.</li>
+        <li><strong>Battery Optimization</strong> — to keep the service running reliably in the background.</li>
+      </ul>
+
+      <h2>Does PIM collect any personal data?</h2>
+      <p>No. PIM does not collect, transmit, or store any personal data on external servers. All settings and preferences are stored locally on your device only.</p>
+
+      <h2>Does PIM use analytics or advertising?</h2>
+      <p>No. PIM contains no analytics, advertising SDKs, or third-party tracking of any kind.</p>
+
+      <h2>Does PIM share data with third parties?</h2>
+      <p>No. PIM does not share any data with third parties because no data is collected in the first place.</p>
+
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, contact us at <a href="mailto:hello@pleaseinconvenienceme.com">hello@pleaseinconvenienceme.com</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Please Inconvenience Me &nbsp;|&nbsp; <a href="/">Home</a> &nbsp;|&nbsp; <a href="/story.html">Why PIM</a></p>
+  </footer>
+
+</body>
+</html>
