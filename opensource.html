@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open source version – PIM</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A6E8E;
+      --primary-light: #2a8fb5;
+      --primary-dark: #0f4a61;
+      --bg: #f7fafb;
+      --white: #ffffff;
+      --text: #0f2027;
+      --text-muted: #4a6572;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 48px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26,110,142,0.1);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: 0.1em;
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 60px 24px;
+    }
+
+    .content { max-width: 560px; width: 100%; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 16px;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .lead {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .download-wrap { text-align: center; margin-bottom: 12px; }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+    }
+    .download-btn:hover { background: var(--primary-light); }
+
+    .version-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ol { margin: 0 0 32px 20px; }
+    ol li {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 20px; }
+
+    .callout {
+      background: #fff8e1;
+      border: 1px solid #f0c040;
+      border-radius: 12px;
+      padding: 18px 22px;
+      color: #7a6000;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .callout strong { color: #5c4800; }
+
+    a { color: var(--primary); }
+
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+    footer a:hover { color: white; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      main { padding: 40px 20px; }
+    }
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "35da5de91ae241a180ee8f3052ffc3c9"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">PIM</a>
+  </nav>
+
+  <main>
+    <div class="content">
+      <h1>The open source version</h1>
+      <p class="lead">
+        PIM's source code is public, and this build is free — every feature unlocked,
+        no trial, no purchase. It's the same app as the Play Store version with the
+        billing code removed.
+      </p>
+
+      <div class="download-wrap">
+        <a class="download-btn" href="https://github.com/PleaseInconvenienceMe/pim/releases/latest">
+          Download the APK
+        </a>
+      </div>
+      <p class="version-note">Hosted on GitHub &middot; always the latest release</p>
+
+      <div class="callout">
+        <strong>Already have PIM from Google Play?</strong> Uninstall it first. The two
+        builds are signed differently, so Android won't install one over the other.
+        Uninstalling clears your restricted apps and settings, so you'll set those up again.
+      </div>
+
+      <h2>How to install it</h2>
+      <ol>
+        <li>Tap the download button above on your phone, and open the APK file when it finishes.</li>
+        <li>Android will warn you that your browser isn't allowed to install apps. Tap <em>Settings</em> in that prompt and turn on the permission for whichever app you downloaded with.</li>
+        <li>Go back and tap <em>Install</em>.</li>
+        <li>If Play Protect asks, choose <em>Install anyway</em> — it flags anything not downloaded from the Play Store.</li>
+      </ol>
+
+      <h2>Staying updated</h2>
+      <p>
+        Sideloaded apps don't update themselves. Either check back here now and then, or
+        use <a href="https://github.com/ImranR98/Obtainium">Obtainium</a>, a free app that
+        watches GitHub releases and updates PIM automatically.
+      </p>
+
+      <h2>Why is it free?</h2>
+      <p>
+        The Play Store version is a one-time purchase, and that's what funds the work.
+        If you use the free build and want to chip in anyway, there's a
+        <a href="/support.html">support page</a>. Either way, the app is the same — nothing
+        is held back.
+      </p>
+
+      <h2>The code</h2>
+      <p>
+        Everything lives at
+        <a href="https://github.com/PleaseInconvenienceMe/pim">github.com/PleaseInconvenienceMe/pim</a>,
+        licensed GPL-3.0. Bug reports are welcome in the issue tracker.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Please Inconvenience Me &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://github.com/PleaseInconvenienceMe/pim">Source code</a></p>
+  </footer>
+
+</body>
+</html>
