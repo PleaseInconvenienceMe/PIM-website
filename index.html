@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PIM – Please Inconvenience Me</title>
+  <meta name="description" content="PIM is a friction-based app blocker for Android and iOS. Instead of locking you out, it makes you do a small task before opening the apps you overuse. One-time purchase, no ads, no tracking, no accounts." />
+  <link rel="canonical" href="https://pleaseinconvenienceme.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Please Inconvenience Me" />
+  <meta property="og:title" content="PIM – Please Inconvenience Me" />
+  <meta property="og:description" content="PIM is a friction-based app blocker for Android and iOS. Instead of locking you out, it makes you do a small task before opening the apps you overuse. One-time purchase, no ads, no tracking, no accounts." />
+  <meta property="og:url" content="https://pleaseinconvenienceme.com/" />
+  <meta property="og:image" content="https://pleaseinconvenienceme.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PIM – You don't need more willpower. You need more inconvenience." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PIM – Please Inconvenience Me" />
+  <meta name="twitter:description" content="PIM is a friction-based app blocker for Android and iOS. Instead of locking you out, it makes you do a small task before opening the apps you overuse. One-time purchase, no ads, no tracking, no accounts." />
+  <meta name="twitter:image" content="https://pleaseinconvenienceme.com/og-image.png" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -413,6 +428,44 @@
     .step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
     /* ─── CTA BANNER ─── */
+    /* ─── TESTIMONIALS ─── */
+    .testimonials {
+      padding: 100px 24px;
+      background: var(--white);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 480px));
+      justify-content: center;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 36px 32px;
+      border: 1px solid rgba(26,110,142,0.08);
+      border-left: 4px solid var(--primary);
+      margin: 0;
+    }
+
+    .testimonial p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .testimonial cite {
+      font-style: normal;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
     .cta-banner {
       padding: 100px 24px;
       text-align: center;
@@ -445,7 +498,9 @@
     footer a { color: rgba(255,255,255,0.88); text-decoration: none; }
     footer a:hover { color: white; }
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center;
-                    gap: 6px 18px; margin-top: 8px; }
+                    gap: 6px 18px; }
+    .footer-contact { color: rgba(255,255,255,0.88); }
+    .footer-legal { margin-top: 14px; opacity: 0.7; font-size: 0.8rem; }
 
     /* ─── STORE BUTTONS ─── */
     .store-btn {
@@ -473,6 +528,14 @@
       position: relative;
       display: inline-block;
     }
+
+    .apk-note {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .apk-note a { color: rgba(255,255,255,0.95); text-decoration: underline; }
 
     /* ─── MOBILE ─── */
     @media (max-width: 600px) {
@@ -565,16 +628,8 @@
             </div>
           </a>
         </div>
-        <div class="coming-soon-wrap">
-          <a href="/opensource.html" class="store-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33s1.7.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
-            <div class="store-btn-text">
-              <span class="sub">Get it free</span>
-              <span class="main">Open source</span>
-            </div>
-          </a>
-        </div>
       </div>
+      <p class="apk-note">Get the open source APK on the <a href="/opensource.html">download page</a>.</p>
     </div>
   </section>
 
@@ -585,12 +640,12 @@
       <h2>See it in action.</h2>
     </div>
     <div class="gallery reveal">
-      <img src="screenshots/Screenshot_20260320-200812.png" alt="PIM welcome screen" />
-      <img src="screenshots/Screenshot_20260320-201159.png" alt="Restricted apps list" />
-      <img src="screenshots/Screenshot_20260320-201220.png" alt="Countdown before app opens" />
-      <img src="screenshots/Screenshot_20260320-201413.png" alt="Math challenge" />
-      <img src="screenshots/Screenshot_20260320-214336.png" alt="Options and settings" />
-      <img src="screenshots/Screenshot_20260418-191614.png" alt="Buy PIM" />
+      <img src="screenshots/Screenshot_20260320-200812.webp" alt="PIM welcome screen" />
+      <img src="screenshots/Screenshot_20260320-201159.webp" alt="Restricted apps list" />
+      <img src="screenshots/Screenshot_20260320-201220.webp" alt="Countdown before app opens" />
+      <img src="screenshots/Screenshot_20260320-201413.webp" alt="Math challenge" />
+      <img src="screenshots/Screenshot_20260320-214336.webp" alt="Options and settings" />
+      <img src="screenshots/Screenshot_20260418-191614.webp" alt="Buy PIM" />
     </div>
   </section>
 
@@ -629,6 +684,24 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="features-header reveal">
+      <span class="section-label">Reviews</span>
+      <h2>What people are saying.</h2>
+    </div>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial reveal">
+        <p>&ldquo;I love this app! What a great way to slow down my less-productive urges in a way that provides just enough friction to subtly influence my behavior, but not so much that I don&rsquo;t want the controls in the first place. Brilliantly done and very professional look and feel.&rdquo;</p>
+        <cite>Google Play review</cite>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <p>&ldquo;Best tool to make me stop &amp; think: do I really want to watch this &mdash; what for? More productive. Thankful.&rdquo;</p>
+        <cite>Google Play review</cite>
+      </blockquote>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section id="install" class="cta-banner reveal">
     <h2>The inconvenience is the point.</h2>
@@ -657,26 +730,18 @@
           </div>
         </a>
       </div>
-      <div class="coming-soon-wrap">
-        <a href="/opensource.html" class="store-btn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33s1.7.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
-          <div class="store-btn-text">
-            <span class="sub">Get it free</span>
-            <span class="main">Open source</span>
-          </div>
-        </a>
-      </div>
     </div>
+    <p class="apk-note">Get the open source APK on the <a href="/opensource.html">download page</a>.</p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Please Inconvenience Me</p>
     <div class="footer-links">
       <a href="/">Home</a>
       <a href="/story.html">Why PIM?</a>
       <span class="footer-contact">Contact: <a href="mailto:hello@pleaseinconvenienceme.com">hello@pleaseinconvenienceme.com</a></span>
     </div>
+    <p class="footer-legal">&copy; 2026 Please Inconvenience Me</p>
   </footer>
 
   <div class="lightbox" id="lightbox">
